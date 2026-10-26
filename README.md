@@ -1,3 +1,7 @@
+### Addon submissions are currently on hold. Primarily due to high increase of new submissions, people ignoring instructions, increasing concerns about plugin security and increased workload needed to verify new submissions. There's new addon database planned for Playnite 11 release, with new submission and verification system, which will be backported to Playnite 10 as well (planned to be done by the end of 2026). At which point we will resume plugin submissions via new addon portal.
+
+### We might accept new addons from long standing trusted members of the community, if you are one of those and you want to submit new addon, please contact Crow on Playnite's Discord. Same if you want to make changes to your existing manifests.
+
 Info
 ---------------------
 
@@ -47,6 +51,7 @@ Must be properly formatted [YAML](https://en.wikipedia.org/wiki/YAML) document.
 | [Screenshots](#Screenshot-fields) || List of add-on screenshots. |
 | IconUrl || Add-on icon image URL. |
 | [UserAgreement](#UserAgreement-fields) || User agreement settings if add-on requires user to agree to custom terms before add-on installation/update. |
+| FaqTopics || FAQ topics for Playnite Discord bot usable via /addonfaq command. |
 
 ### Add-on types
 
@@ -70,6 +75,13 @@ Must be properly formatted [YAML](https://en.wikipedia.org/wiki/YAML) document.
 | Thumbnail | URL to small preview image. |
 | Image | URL to full image. |
 
+### FaqTopic fields
+
+| Field | Description |
+| :--- | :--- |
+| Name | Topic name visible in command selection. |
+| Answer | An answer ported by the bot as a response. |
+
 ### Example
 
 ```yaml
@@ -87,6 +99,11 @@ Links:
 Screenshots:
     - Thumbnail: https://addon2.link/screenshots/thumb.jpg
       Image: https://addon2.link/screenshots/image.jpg
+FaqTopics:
+    - Name: How do I do this thing that everybody is asking?
+      Answer: This will be posted as a response.
+    - Name: How do I do this other thing that everybody is asking?
+      Answer: https://codeberg.org/CrowIsTaken/PlayniteExtensions/wiki/Battle.net-troubleshooting#games-not-reported-as-installed
 ```
 
 Installer manifest
